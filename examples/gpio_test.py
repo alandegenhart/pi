@@ -10,11 +10,11 @@ class Relay():
     def __init__(self, pin):
         self.led = gpiozero.LED(pin)
 
-    def on():
+    def on(self):
         """Turn on LED."""
         self.led.on()
 
-    def off():
+    def off(self):
         """Turn off LED."""
         self.led.off()
 
