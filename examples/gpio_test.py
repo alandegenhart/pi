@@ -3,6 +3,7 @@
 # Imports
 import time
 import gpiozero
+import signal
 
 
 def main():
@@ -18,13 +19,10 @@ def main():
         time.sleep(0.25)
 
     # Test button
-    while True:
-        if button.is_pressed:
-            button_state = 'pressed'
-        else:
-            button_state = 'not pressed'
+    button.when_pressed = led.on
+    button.when_released = led.off
 
-        print(f'Button state: {button_state}')
+    signal.pause()
 
     return None
 
