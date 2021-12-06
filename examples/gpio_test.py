@@ -29,7 +29,7 @@ def main():
     """Main display function."""
     button = gpiozero.Button(17)
     relay_pins = [18, 23, 24, 25, 12, 16, 20, 21]
-    relay_array = [Relay(pin, id) for pin, id in enumerate(relay_pins)]
+    relay_array = [Relay(pin, id) for id, pin in enumerate(relay_pins)]
 
     # Turn on and off LED
     for i in range(len(relay_array)):
