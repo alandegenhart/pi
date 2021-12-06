@@ -26,9 +26,9 @@ def main():
 
     # Turn on and off LED
     for i in range(5):
-        relay.led.on()
+        relay.on()
         time.sleep(0.25)
-        relay.led.off()
+        relay.off()
         time.sleep(0.25)
 
     # Initialize button action
