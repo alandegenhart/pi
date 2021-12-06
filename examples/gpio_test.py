@@ -12,10 +12,12 @@ class Relay():
 
     def on(self):
         """Turn on LED."""
+        print('LED state: ON')
         self.led.on()
 
     def off(self):
         """Turn off LED."""
+        print('LED state: OFF')
         self.led.off()
 
 
