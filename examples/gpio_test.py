@@ -28,7 +28,7 @@ class Relay():
 def main():
     """Main display function."""
     button = gpiozero.Button(22)
-    relay = Relay(17)
+    relay = Relay(17, 0)
 
     # Turn on and off LED
     for i in range(4):
