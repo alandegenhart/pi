@@ -21,7 +21,6 @@ class Relay():
 
 def main():
     """Main display function."""
-    led = gpiozero.LED(17)
     button = gpiozero.Button(22)
     relay = Relay(17)
 
