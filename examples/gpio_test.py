@@ -27,18 +27,20 @@ class Relay():
 
 def main():
     """Main display function."""
-    button = gpiozero.Button(22)
-    relay = Relay(17, 0)
+    button = gpiozero.Button(17)
+    relay_pins = [18, 23, 24, 25, 12, 16, 20, 21]
+    relay_array = [Relay(pin, id) for pin, id in enumerate(relay_pins)]
 
     # Turn on and off LED
-    for i in range(4):
-        relay.toggle()
-        time.sleep(0.25)
+    for i in range(len(relay_array)):
+        relay_array[i].toggle()
+        time.sleep(1)
+        relay_array[i].toggle()
 
     # Initialize button action
-    button.when_pressed = relay.toggle
+    #button.when_pressed = relay.toggle
 
-    signal.pause()
+    #signal.pause()
 
     return None
 
