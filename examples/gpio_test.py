@@ -42,6 +42,9 @@ def main():
 
     #signal.pause()
 
+    # TODO: Add buttons to Relay class
+    # TODO: Test out relay control of LEDs
+
     return None
 
 
